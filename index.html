@@ -15,13 +15,15 @@
       <audio id="musik-bg" src="rambu-rambu-lalulintas.mp3" preload="auto"></audio>
     </a-assets>
 
-    <a-marker preset="hiro" id="marker-utama">
-      <a-entity
-        gltf-model="projek-rambu-lalulintas.glb"
-        scale="0.08 0.08 0.08"
-        position="0 0 0"
-        rotation="0 0 0"
-        animation-mixer="clip: *; loop: repeat">
+    <a-marker preset="hiro" id="marker-utama" smooth="true" smoothCount="25" smoothTolerance="0.005" smoothThreshold="8">
+      <!-- Parent entity untuk rotasi sudut pandang -->
+      <a-entity rotation="-75 0 0">
+        <a-entity
+          gltf-model="projek-rambu-lalulintas.glb"
+          scale="0.08 0.08 0.08"
+          position="0 0 0"
+          animation-mixer="clip: *; loop: repeat">
+        </a-entity>
       </a-entity>
     </a-marker>
 
